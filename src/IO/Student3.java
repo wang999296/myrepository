@@ -3,8 +3,9 @@ package IO;
 import java.io.Serializable;
 
 public class Student3 implements Serializable {
+    private static final long serialVersionUID = 42L;
     private String name;
-    private int age;
+    private transient int age;
 
     public Student3() {
     }
@@ -29,4 +30,12 @@ public class Student3 implements Serializable {
     public void setAge(int age) {
         this.age = age;
     }
+//
+//    @Override
+//    public String toString() {
+//        return "Student3{" +
+//                "name='" + name + '\'' +
+//                ", age=" + age +
+//                '}';
+//    }
 }
